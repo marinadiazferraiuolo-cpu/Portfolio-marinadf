@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marina Díaz Ferraiuolo — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#efe8df;
+    --page-border:#8f7ee0;
+    --ink:#43301f;
+    --ink-soft:#7a6650;
+    --line:#d8cdbc;
+    --card:#f7f2ea;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:#d9d2c6;
+    color:var(--ink);
+    font-family:'EB Garamond', Georgia, serif;
+  }
+  .page{
+    max-width:900px;
+    margin:0 auto;
+    background:var(--bg);
+    border:1px solid var(--page-border);
+    outline:1px solid var(--page-border);
+    outline-offset:6px;
+    min-height:100vh;
+  }
+  .inner{padding:0 56px;}
+
+  /* ---- header, invite-style ---- */
+  header{
+    padding:96px 56px 64px;
+    text-align:center;
+  }
+  header h1{
+    font-family:'Playfair Display', serif;
+    font-weight:500;
+    font-size:2.6rem;
+    line-height:1.2;
+    margin:0 0 4px;
+  }
+  header h1 em{
+    font-style:italic;
+    font-weight:500;
+  }
+  .flourish{
+    margin:36px auto 32px;
+    width:70px;
+    display:block;
+    opacity:0.75;
+  }
+  header p.pitch{
+    max-width:520px;
+    margin:0 auto 44px;
+    color:var(--ink-soft);
+    font-size:1.15rem;
+    line-height:1.6;
+  }
+  .signature{
+    border-top:1px solid var(--line);
+    padding-top:22px;
+    max-width:420px;
+    margin:0 auto;
+  }
+  .signature .name{
+    font-size:1rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--ink);
+  }
+  .signature .role{
+    font-style:italic;
+    color:var(--ink-soft);
+    font-size:1.02rem;
+    margin-top:6px;
+  }
+  .tools-row{
+    margin-top:26px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .tools-row span{
+    font-size:0.78rem;
+    letter-spacing:0.03em;
+    color:var(--ink-soft);
+    border:1px solid var(--line);
+    padding:5px 14px;
+    border-radius:20px;
+    font-family:'EB Garamond', serif;
+  }
+
+  /* ---- projects ---- */
+  section.project{
+    padding:58px 56px;
+    border-top:1px solid var(--line);
+  }
+  .project-head{
+    text-align:center;
+    margin-bottom:10px;
+  }
+  .project-head .tag{
+    font-size:0.72rem;
+    text-transform:uppercase;
+    letter-spacing:0.16em;
+    color:var(--ink-soft);
+  }
+  .project-head h2{
+    font-family:'Playfair Display', serif;
+    font-weight:500;
+    font-size:1.7rem;
+    margin:8px 0 0;
+  }
+  .project-brief{
+    color:var(--ink-soft);
+    max-width:600px;
+    margin:18px auto 36px;
+    text-align:center;
+    font-size:1.05rem;
+    line-height:1.65;
+  }
+  .video-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+    gap:26px;
+  }
+  .video-grid.single{
+    grid-template-columns:minmax(260px,560px);
+    justify-content:center;
+  }
+  .video-card{
+    background:var(--card);
+    border:1px solid var(--line);
+  }
+  .video-card video{
+    width:100%;
+    display:block;
+    background:#000;
+  }
+  .video-card .caption{
+    padding:16px 20px 20px;
+  }
+  .video-card .caption h3{
+    font-family:'Playfair Display', serif;
+    font-weight:500;
+    font-size:1.02rem;
+    margin:0 0 6px;
+  }
+  .video-card .caption p{
+    font-size:0.88rem;
+    color:var(--ink-soft);
+    margin:0;
+    line-height:1.5;
+  }
+  .meta-block{
+    margin-top:34px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+    gap:24px;
+    max-width:700px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .meta-block div h4{
+    font-size:0.72rem;
+    text-transform:uppercase;
+    letter-spacing:0.12em;
+    color:var(--ink);
+    margin:0 0 8px;
+    border-bottom:1px solid var(--line);
+    padding-bottom:6px;
+  }
+  .meta-block div p{
+    font-size:0.92rem;
+    color:var(--ink-soft);
+    margin:0;
+    line-height:1.55;
+  }
+
+  footer{
+    padding:60px 56px 80px;
+    text-align:center;
+    border-top:1px solid var(--line);
+  }
+  footer .flourish{margin:0 auto 28px;}
+  footer .name{
+    font-size:0.95rem;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+  }
+  footer .contact{
+    margin-top:14px;
+    color:var(--ink-soft);
+    font-size:0.98rem;
+  }
+  footer .contact a{
+    color:var(--ink);
+    text-decoration:none;
+    border-bottom:1px solid var(--line);
+  }
+
+  @media (max-width:640px){
+    .inner, header, section.project, footer{padding-left:24px;padding-right:24px;}
+    header h1{font-size:2rem;}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <h1>Comunicación,<br>marketing &amp;<br><em>contenido con IA</em></h1>
+    <svg class="flourish" viewBox="0 0 100 140" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#43301f" stroke-width="1">
+      <line x1="50" y1="0" x2="50" y2="140" opacity="0.6"/>
+      <circle cx="50" cy="14" r="2" fill="#43301f" stroke="none"/>
+      <path d="M50 40 C20 40 15 65 40 70 C15 75 20 100 50 100 C80 100 85 75 60 70 C85 65 80 40 50 40 Z" opacity="0.8"/>
+      <path d="M30 100 C20 110 20 122 32 126 C36 118 34 108 30 100 Z" opacity="0.7"/>
+      <path d="M70 100 C80 110 80 122 68 126 C64 118 66 108 70 100 Z" opacity="0.7"/>
+    </svg>
+    <p class="pitch">
+      Diseño y produzco piezas audiovisuales integrando IA generativa con edición tradicional, para proyectos
+      de tecnología, legaltech, educación y real estate. Este portfolio reúne siete piezas producidas de punta
+      a punta: concepto, generación con IA, edición y guion.
+    </p>
+    <div class="signature">
+      <div class="name">Marina Díaz Ferraiuolo</div>
+      <div class="role">Comunicación estratégica, marketing y desarrollo de contenido con IA</div>
+      <div class="tools-row">
+        <span>ChatGPT (imagen)</span>
+        <span>Higgsfield</span>
+        <span>Kling 3.0</span>
+        <span>Veo 3</span>
+        <span>ElevenLabs</span>
+        <span>CapCut</span>
+        <span>Canva</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="project">
+    <div class="project-head">
+      <span class="tag">Branding · Web</span>
+      <h2>Privacy AI Studio</h2>
+    </div>
+    <p class="project-brief">
+      Banner de video en 4K para la web de una plataforma de privacidad, anonimización y gobernanza de IA.
+      El objetivo era transmitir en movimiento el concepto central del producto: control de datos antes de
+      procesar, no magia de IA sin trazabilidad.
+    </p>
+    <div class="video-grid single">
+      <div class="video-card">
+        <video controls preload="metadata" poster="media/thumbs/privacy-ai-studio-banner.jpg">
+          <source src="media/privacy-ai-studio-banner.mp4" type="video/mp4">
+        </video>
+        <div class="caption">
+          <h3>Banner web 4K</h3>
+          <p>Elemento de marca generado con IA en la tonalidad definida, producido en Higgsfield con Kling 3.0.</p>
+        </div>
+      </div>
+    </div>
+    <div class="meta-block">
+      <div>
+        <h4>Proceso</h4>
+        <p>Generación del elemento de marca con IA → iteración de tonalidad → producción del video banner en Higgsfield (Kling 3.0), formato 4K para uso en web institucional.</p>
+      </div>
+      <div>
+        <h4>Rol</h4>
+        <p>Concepto de marca, dirección visual y producción del asset.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="project">
+    <div class="project-head">
+      <span class="tag">Contenido institucional · Redes</span>
+      <h2>IALAB — Facultad de Derecho, UBA</h2>
+    </div>
+    <p class="project-brief">
+      Reel promocional de "La Masterclass de Agentes de IA", organizada junto a AI Academy (doinGlobal), para
+      anunciar el evento y la presentación de dos libros del laboratorio de inteligencia artificial de la
+      Facultad de Derecho (UBA). El eje conceptual: el sedentarismo cognitivo como problema que la masterclass
+      viene a interpelar.
+    </p>
+    <div class="video-grid single">
+      <div class="video-card">
+        <video controls preload="metadata" poster="media/thumbs/ialab-uba-reel.jpg">
+          <source src="media/ialab-uba-reel.mp4" type="video/mp4">
+        </video>
+        <div class="caption">
+          <h3>Reel — La Masterclass de Agentes de IA</h3>
+          <p>Imagen conceptual generada con ChatGPT, iterada en Higgsfield hasta la pieza final.</p>
+        </div>
+      </div>
+    </div>
+    <div class="meta-block">
+      <div>
+        <h4>Proceso</h4>
+        <p>Generación de imagen conceptual con ChatGPT → testeo de distintos modelos en Higgsfield → montaje final en formato vertical para Instagram.</p>
+      </div>
+      <div>
+        <h4>Rol</h4>
+        <p>Concepto creativo, guion visual y producción.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="project">
+    <div class="project-head">
+      <span class="tag">Real estate · Vaca Muerta</span>
+      <h2>Añelo Plaza Shopping — Render 3D</h2>
+    </div>
+    <p class="project-brief">
+      Video de producto para la web del desarrollo comercial en Vaca Muerta. Brief del cliente: un video
+      moderno, con una camioneta circulando y visibilidad del interior de un local, que comunique escala y
+      uso real del espacio — no solo un render estático de locales comerciales.
+    </p>
+    <div class="video-grid single">
+      <div class="video-card">
+        <video controls preload="metadata" poster="media/thumbs/anelo-render-camioneta.jpg">
+          <source src="media/anelo-render-camioneta.mp4" type="video/mp4">
+        </video>
+        <div class="caption">
+          <h3>Render 3D — camioneta e interior de local</h3>
+          <p>Renders base generados con ChatGPT, nuevas vistas a partir de esos renders, video final armado en Higgsfield combinando Veo 3 y Kling 3.0.</p>
+        </div>
+      </div>
+    </div>
+    <div class="meta-block">
+      <div>
+        <h4>Proceso</h4>
+        <p>Render base (ChatGPT) → generación de nuevas vistas a partir del render → composición de video en Higgsfield (Veo 3 + Kling 3.0).</p>
+      </div>
+      <div>
+        <h4>Rol</h4>
+        <p>Dirección de arte, generación de imagen y producción de video.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="project">
+    <div class="project-head">
+      <span class="tag">Real estate · Vaca Muerta</span>
+      <h2>Añelo Plaza Shopping — Simulación de locales</h2>
+    </div>
+    <p class="project-brief">
+      Simulaciones renderizadas para anticipar la experiencia del espacio antes de su construcción: cómo se
+      vive un local por dentro y cómo se percibe el conjunto de locales comerciales desde el exterior. Piezas
+      pensadas para presentaciones comerciales a potenciales inquilinos e inversores.
+    </p>
+    <div class="video-grid">
+      <div class="video-card">
+        <video controls preload="metadata" poster="media/thumbs/anelo-cafeteria.jpg">
+          <source src="media/anelo-cafeteria.mp4" type="video/mp4">
+        </video>
+        <div class="caption">
+          <h3>Render — Cafetería, vista interior</h3>
+          <p>Simulación de un local gastronómico por dentro, para transmitir escala, luz y experiencia real del espacio.</p>
+        </div>
+      </div>
+      <div class="video-card">
+        <video controls preload="metadata" poster="media/thumbs/anelo-locales-exteriores.jpg">
+          <source src="media/anelo-locales-exteriores.mp4" type="video/mp4">
+        </video>
+        <div class="caption">
+          <h3>Render — Locales comerciales, vista exterior</h3>
+          <p>Simulación del frente y la circulación exterior del conjunto de locales del desarrollo.</p>
+        </div>
+      </div>
+    </div>
+    <div class="meta-block">
+      <div>
+        <h4>Proceso</h4>
+        <p>Render base 3D → animación e iteración de vistas interiores y exteriores → montaje final.</p>
+      </div>
+      <div>
+        <h4>Rol</h4>
+        <p>Dirección de arte, generación de imagen y producción de video.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="project">
+    <div class="project-head">
+      <span class="tag">Real estate · Storytelling</span>
+      <h2>Añelo Plaza Shopping — Narrativa institucional</h2>
+    </div>
+    <p class="project-brief">
+      Dos piezas tipo trailer para presentar el desarrollo urbano de Vaca Muerta como núcleo comercial y
+      punto de encuentro de la región — no como un simple predio de locales. Guion narrativo propio, locución
+      generada con ElevenLabs y edición en CapCut y Canva.
+    </p>
+    <div class="video-grid">
+      <div class="video-card">
+        <video controls preload="metadata" poster="media/thumbs/anelo-trailer-1.jpg">
+          <source src="media/anelo-trailer-1.mp4" type="video/mp4">
+        </video>
+        <div class="caption">
+          <h3>Trailer institucional I</h3>
+          <p>Recorrido del complejo, guion narrativo y locución con ElevenLabs.</p>
+        </div>
+      </div>
+      <div class="video-card">
+        <video controls preload="metadata" poster="media/thumbs/anelo-trailer-2.jpg">
+          <source src="media/anelo-trailer-2.mp4" type="video/mp4">
+        </video>
+        <div class="caption">
+          <h3>Trailer institucional II — Teaser</h3>
+          <p>Apertura con contexto geográfico (Añelo), tono emotivo, locución con ElevenLabs.</p>
+        </div>
+      </div>
+    </div>
+    <div class="meta-block">
+      <div>
+        <h4>Proceso</h4>
+        <p>Guion narrativo propio → edición en CapCut y Canva → locución generada con ElevenLabs → montaje final.</p>
+      </div>
+      <div>
+        <h4>Rol</h4>
+        <p>Guion, edición, dirección de locución y montaje.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <svg class="flourish" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#43301f" stroke-width="1" style="width:56px;">
+      <path d="M50 0 C20 0 15 25 40 30 C15 35 20 60 50 60 C80 60 85 35 60 30 C85 25 80 0 50 0 Z" opacity="0.8"/>
+    </svg>
+    <div class="name">Marina Díaz Ferraiuolo</div>
+    <div class="contact">
+      <a href="mailto:marina.diazferraiuolo@gmail.com">marina.diazferraiuolo@gmail.com</a>
+      &nbsp;·&nbsp; WhatsApp +34 637 234 777
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
