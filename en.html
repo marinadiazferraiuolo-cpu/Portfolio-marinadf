@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,8 +31,27 @@
     outline:1px solid var(--page-border);
     outline-offset:6px;
     min-height:100vh;
+    position:relative;
   }
   .inner{padding:0 56px;}
+
+  .lang-switch{
+    position:absolute;
+    top:24px;
+    right:32px;
+    font-size:0.78rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+  }
+  .lang-switch a{
+    color:var(--ink-soft);
+    text-decoration:none;
+    padding-bottom:2px;
+  }
+  .lang-switch a.active{
+    color:var(--ink);
+    border-bottom:1px solid var(--ink);
+  }
 
   /* ---- header, invite-style ---- */
   header{
@@ -239,36 +258,17 @@
     .inner, header, section.project, footer{padding-left:24px;padding-right:24px;}
     header h1{font-size:2rem;}
   }
-
-  .lang-switch{
-    position:absolute;
-    top:24px;
-    right:32px;
-    font-size:0.78rem;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-  }
-  .lang-switch a{
-    color:var(--ink-soft);
-    text-decoration:none;
-    padding-bottom:2px;
-  }
-  .lang-switch a.active{
-    color:var(--ink);
-    border-bottom:1px solid var(--ink);
-  }
-  .page{position:relative;}
 </style>
 </head>
 <body>
 <div class="page">
 
   <div class="lang-switch">
-    <a class="active" href="index.html">ES</a> · <a href="en.html">EN</a>
+    <a href="index.html">ES</a> · <a class="active" href="en.html">EN</a>
   </div>
 
   <header>
-    <h1>Comunicación,<br>marketing &amp;<br><em>contenido con IA</em></h1>
+    <h1>Communication,<br>marketing &amp;<br><em>AI-driven content</em></h1>
     <svg class="flourish" viewBox="0 0 100 140" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#43301f" stroke-width="1">
       <line x1="50" y1="0" x2="50" y2="140" opacity="0.6"/>
       <circle cx="50" cy="14" r="2" fill="#43301f" stroke="none"/>
@@ -277,15 +277,15 @@
       <path d="M70 100 C80 110 80 122 68 126 C64 118 66 108 70 100 Z" opacity="0.7"/>
     </svg>
     <p class="pitch">
-      Diseño y produzco piezas audiovisuales integrando IA generativa con edición tradicional, para proyectos
-      de tecnología, legaltech, educación y real estate. Este portfolio reúne ocho piezas producidas de punta
-      a punta: concepto, generación con IA, edición y guion.
+      I design and produce audiovisual pieces that combine generative AI with traditional editing, for
+      technology, legaltech, education and real estate projects. This portfolio brings together eight
+      end-to-end productions: concept, AI generation, editing and scriptwriting.
     </p>
     <div class="signature">
       <div class="name">Marina Díaz Ferraiuolo</div>
-      <div class="role">Comunicación estratégica, marketing y desarrollo de contenido con IA</div>
+      <div class="role">Strategic communication, marketing &amp; AI content development</div>
       <div class="tools-row">
-        <span>ChatGPT (imagen)</span>
+        <span>ChatGPT (image)</span>
         <span>Higgsfield</span>
         <span>Kling 3.0</span>
         <span>Veo 3</span>
@@ -302,9 +302,9 @@
       <h2>Privacy AI Studio</h2>
     </div>
     <p class="project-brief">
-      Banner de video en 4K para la web de una plataforma de privacidad, anonimización y gobernanza de IA.
-      El objetivo era transmitir en movimiento el concepto central del producto: control de datos antes de
-      procesar, no magia de IA sin trazabilidad.
+      4K video banner for the website of an AI privacy, anonymization and governance platform. The goal
+      was to convey the product's core concept in motion: control data before processing it — not AI as
+      magic without traceability.
     </p>
     <div class="video-grid single">
       <div class="video-card">
@@ -312,33 +312,33 @@
           <source src="media/privacy-ai-studio-banner.mp4" type="video/mp4">
         </video>
         <div class="caption">
-          <h3>Banner web 4K</h3>
-          <p>Elemento de marca generado con IA en la tonalidad definida, producido en Higgsfield con Kling 3.0.</p>
+          <h3>4K web banner</h3>
+          <p>AI-generated brand element in the defined tone, produced in Higgsfield with Kling 3.0.</p>
         </div>
       </div>
     </div>
     <div class="meta-block">
       <div>
-        <h4>Proceso</h4>
-        <p>Generación del elemento de marca con IA → iteración de tonalidad → producción del video banner en Higgsfield (Kling 3.0), formato 4K para uso en web institucional.</p>
+        <h4>Process</h4>
+        <p>AI generation of the brand element → tone iteration → production of the video banner in Higgsfield (Kling 3.0), 4K format for institutional web use.</p>
       </div>
       <div>
-        <h4>Rol</h4>
-        <p>Concepto de marca, dirección visual y producción del asset.</p>
+        <h4>Role</h4>
+        <p>Brand concept, visual direction and asset production.</p>
       </div>
     </div>
   </section>
 
   <section class="project">
     <div class="project-head">
-      <span class="tag">Contenido institucional · Redes</span>
-      <h2>IALAB — Facultad de Derecho, UBA</h2>
+      <span class="tag">Institutional content · Social</span>
+      <h2>IALAB — School of Law, University of Buenos Aires</h2>
     </div>
     <p class="project-brief">
-      Reel promocional de "La Masterclass de Agentes de IA", organizada junto a AI Academy (doinGlobal), para
-      anunciar el evento y la presentación de dos libros del laboratorio de inteligencia artificial de la
-      Facultad de Derecho (UBA). El eje conceptual: el sedentarismo cognitivo como problema que la masterclass
-      viene a interpelar.
+      Promotional reel for "La Masterclass de Agentes de IA" (The AI Agents Masterclass), organized together
+      with AI Academy (doinGlobal), to announce the event and the launch of two books by the AI lab at the
+      School of Law (UBA). Conceptual thread: cognitive sedentarism as the problem the masterclass sets out
+      to challenge.
     </p>
     <div class="video-grid single">
       <div class="video-card">
@@ -347,53 +347,52 @@
         </video>
         <div class="caption">
           <h3>Reel — La Masterclass de Agentes de IA</h3>
-          <p>Imagen conceptual generada con ChatGPT, iterada en Higgsfield hasta la pieza final.</p>
+          <p>Conceptual image generated with ChatGPT, iterated in Higgsfield through to the final piece.</p>
         </div>
       </div>
     </div>
     <div class="meta-block">
       <div>
-        <h4>Proceso</h4>
-        <p>Generación de imagen conceptual con ChatGPT → testeo de distintos modelos en Higgsfield → montaje final en formato vertical para Instagram.</p>
+        <h4>Process</h4>
+        <p>Conceptual image generation with ChatGPT → testing different models in Higgsfield → final edit in vertical format for Instagram.</p>
       </div>
       <div>
-        <h4>Rol</h4>
-        <p>Concepto creativo, guion visual y producción.</p>
+        <h4>Role</h4>
+        <p>Creative concept, visual script and production.</p>
       </div>
     </div>
   </section>
 
   <section class="project">
     <div class="project-head">
-      <span class="tag">Contenido institucional · Podcast</span>
-      <h2>Futuro Pasado — Intros del podcast (IALAB)</h2>
+      <span class="tag">Institutional content · Podcast</span>
+      <h2>Futuro Pasado — Podcast intros (IALAB)</h2>
     </div>
     <p class="project-brief">
-      "Futuro Pasado" es el podcast del laboratorio de inteligencia artificial de la Facultad de Derecho (UBA),
-      un espacio de reflexión crítica sobre el presente y el futuro de la IA frente a la aceleración
-      tecnológica. Produje las piezas audiovisuales de apertura de los episodios, disponibles en el canal
-      de YouTube de IALAB.
+      "Futuro Pasado" is the podcast of the AI lab at the School of Law (UBA), a space for critical reflection
+      on the present and future of AI amid technological acceleration. I produced the opening audiovisual
+      pieces for the episodes, available on IALAB's YouTube channel.
     </p>
     <div class="video-grid single">
       <div class="video-card">
         <a class="yt-link" href="https://www.youtube.com/watch?v=AtoqorEX5V0&list=PLTBzB4itZMjCWAlLaa6DAfOko4laJk8lC" target="_blank" rel="noopener">
-          <img src="https://img.youtube.com/vi/AtoqorEX5V0/maxresdefault.jpg" alt="Futuro Pasado — ver en YouTube">
+          <img src="https://img.youtube.com/vi/AtoqorEX5V0/maxresdefault.jpg" alt="Futuro Pasado — watch on YouTube">
           <span class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
         </a>
         <div class="caption">
-          <h3>Ver playlist completa en YouTube</h3>
-          <p>Intros producidas para los episodios del podcast, generadas con IA y editadas para dar identidad visual a la serie.</p>
+          <h3>Watch the full playlist on YouTube</h3>
+          <p>Intros produced for the podcast's episodes, generated with AI and edited to give the series a visual identity.</p>
         </div>
       </div>
     </div>
     <div class="meta-block">
       <div>
-        <h4>Proceso</h4>
-        <p>Definición de identidad visual de la serie → generación de piezas con IA → edición y montaje de la intro para cada episodio.</p>
+        <h4>Process</h4>
+        <p>Defining the series' visual identity → AI generation of pieces → editing and assembling the intro for each episode.</p>
       </div>
       <div>
-        <h4>Rol</h4>
-        <p>Concepto visual, producción y edición de las intros.</p>
+        <h4>Role</h4>
+        <p>Visual concept, production and editing of the intros.</p>
       </div>
     </div>
   </section>
@@ -401,12 +400,12 @@
   <section class="project">
     <div class="project-head">
       <span class="tag">Real estate · Vaca Muerta</span>
-      <h2>Añelo Plaza Shopping — Render 3D</h2>
+      <h2>Añelo Plaza Shopping — 3D Render</h2>
     </div>
     <p class="project-brief">
-      Video de producto para la web del desarrollo comercial en Vaca Muerta. Brief del cliente: un video
-      moderno, con una camioneta circulando y visibilidad del interior de un local, que comunique escala y
-      uso real del espacio — no solo un render estático de locales comerciales.
+      Product video for the website of a commercial development in Vaca Muerta. Client brief: a modern
+      video, with a truck driving through and visibility of a store's interior, conveying scale and real
+      use of the space — not just a static render of storefronts.
     </p>
     <div class="video-grid single">
       <div class="video-card">
@@ -414,19 +413,19 @@
           <source src="media/anelo-render-camioneta.mp4" type="video/mp4">
         </video>
         <div class="caption">
-          <h3>Render 3D — camioneta e interior de local</h3>
-          <p>Renders base generados con ChatGPT, nuevas vistas a partir de esos renders, video final armado en Higgsfield combinando Veo 3 y Kling 3.0.</p>
+          <h3>3D render — truck and store interior</h3>
+          <p>Base renders generated with ChatGPT, new views built from those renders, final video assembled in Higgsfield combining Veo 3 and Kling 3.0.</p>
         </div>
       </div>
     </div>
     <div class="meta-block">
       <div>
-        <h4>Proceso</h4>
-        <p>Render base (ChatGPT) → generación de nuevas vistas a partir del render → composición de video en Higgsfield (Veo 3 + Kling 3.0).</p>
+        <h4>Process</h4>
+        <p>Base render (ChatGPT) → generating new views from the render → video composition in Higgsfield (Veo 3 + Kling 3.0).</p>
       </div>
       <div>
-        <h4>Rol</h4>
-        <p>Dirección de arte, generación de imagen y producción de video.</p>
+        <h4>Role</h4>
+        <p>Art direction, image generation and video production.</p>
       </div>
     </div>
   </section>
@@ -434,12 +433,12 @@
   <section class="project">
     <div class="project-head">
       <span class="tag">Real estate · Vaca Muerta</span>
-      <h2>Añelo Plaza Shopping — Simulación de locales</h2>
+      <h2>Añelo Plaza Shopping — Store Simulations</h2>
     </div>
     <p class="project-brief">
-      Simulaciones renderizadas para anticipar la experiencia del espacio antes de su construcción: cómo se
-      vive un local por dentro y cómo se percibe el conjunto de locales comerciales desde el exterior. Piezas
-      pensadas para presentaciones comerciales a potenciales inquilinos e inversores.
+      Rendered simulations to anticipate the experience of the space before construction: what it feels
+      like inside a store, and how the set of storefronts is perceived from the outside. Pieces designed
+      for commercial presentations to potential tenants and investors.
     </p>
     <div class="video-grid">
       <div class="video-card">
@@ -447,8 +446,8 @@
           <source src="media/anelo-cafeteria.mp4" type="video/mp4">
         </video>
         <div class="caption">
-          <h3>Render — Cafetería, vista interior</h3>
-          <p>Simulación de un local gastronómico por dentro, para transmitir escala, luz y experiencia real del espacio.</p>
+          <h3>Render — Café, interior view</h3>
+          <p>Simulation of a food-and-beverage store's interior, conveying scale, light and the real experience of the space.</p>
         </div>
       </div>
       <div class="video-card">
@@ -456,19 +455,19 @@
           <source src="media/anelo-locales-exteriores.mp4" type="video/mp4">
         </video>
         <div class="caption">
-          <h3>Render — Locales comerciales, vista exterior</h3>
-          <p>Simulación del frente y la circulación exterior del conjunto de locales del desarrollo.</p>
+          <h3>Render — Storefronts, exterior view</h3>
+          <p>Simulation of the façade and exterior circulation of the development's storefronts.</p>
         </div>
       </div>
     </div>
     <div class="meta-block">
       <div>
-        <h4>Proceso</h4>
-        <p>Render base 3D → animación e iteración de vistas interiores y exteriores → montaje final.</p>
+        <h4>Process</h4>
+        <p>Base 3D render → animation and iteration of interior and exterior views → final edit.</p>
       </div>
       <div>
-        <h4>Rol</h4>
-        <p>Dirección de arte, generación de imagen y producción de video.</p>
+        <h4>Role</h4>
+        <p>Art direction, image generation and video production.</p>
       </div>
     </div>
   </section>
@@ -476,12 +475,12 @@
   <section class="project">
     <div class="project-head">
       <span class="tag">Real estate · Storytelling</span>
-      <h2>Añelo Plaza Shopping — Narrativa institucional</h2>
+      <h2>Añelo Plaza Shopping — Institutional Narrative</h2>
     </div>
     <p class="project-brief">
-      Dos piezas tipo trailer para presentar el desarrollo urbano de Vaca Muerta como núcleo comercial y
-      punto de encuentro de la región — no como un simple predio de locales. Guion narrativo propio, locución
-      generada con ElevenLabs y edición en CapCut y Canva.
+      Two trailer-style pieces presenting Vaca Muerta's urban development as a commercial hub and meeting
+      point for the region — not just a plot of storefronts. Original script, voiceover generated with
+      ElevenLabs, edited in CapCut and Canva.
     </p>
     <div class="video-grid">
       <div class="video-card">
@@ -489,8 +488,8 @@
           <source src="media/anelo-trailer-1.mp4" type="video/mp4">
         </video>
         <div class="caption">
-          <h3>Trailer institucional I</h3>
-          <p>Recorrido del complejo, guion narrativo y locución con ElevenLabs.</p>
+          <h3>Institutional trailer I</h3>
+          <p>A tour of the complex, original script and ElevenLabs voiceover.</p>
         </div>
       </div>
       <div class="video-card">
@@ -498,19 +497,19 @@
           <source src="media/anelo-trailer-2.mp4" type="video/mp4">
         </video>
         <div class="caption">
-          <h3>Trailer institucional II — Teaser</h3>
-          <p>Apertura con contexto geográfico (Añelo), tono emotivo, locución con ElevenLabs.</p>
+          <h3>Institutional trailer II — Teaser</h3>
+          <p>Opens with geographic context (Añelo), emotional tone, ElevenLabs voiceover.</p>
         </div>
       </div>
     </div>
     <div class="meta-block">
       <div>
-        <h4>Proceso</h4>
-        <p>Guion narrativo propio → edición en CapCut y Canva → locución generada con ElevenLabs → montaje final.</p>
+        <h4>Process</h4>
+        <p>Original script → editing in CapCut and Canva → voiceover generated with ElevenLabs → final edit.</p>
       </div>
       <div>
-        <h4>Rol</h4>
-        <p>Guion, edición, dirección de locución y montaje.</p>
+        <h4>Role</h4>
+        <p>Scriptwriting, editing, voiceover direction and final cut.</p>
       </div>
     </div>
   </section>
